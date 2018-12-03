@@ -12,6 +12,7 @@ module.exports = {
 
 async function create(docParam) {
     const doctor = new Doctor(docParam);
+    //check is required there is an issue if sent a fake data.
     doctor.docId = docParam.firstName.charAt(0).toUpperCase()
                         +docParam.lastName.charAt(0).toUpperCase()
                         +'-'
